@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "yals"
+  "defaultProject": "yals",
+  "cli": {
+    "analytics": "0dcd2793-ad1b-49a5-8123-09d7ceb23f38"
+  }
 }
