@@ -1,5 +1,6 @@
-import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
+import {Page} from './classes/page';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,11 @@ import {MediaMatcher} from '@angular/cdk/layout';
 export class AppComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
   private readonly pMobileQueryListener: () => void;
+  public readonly pages: Page[] = [
+    {name: 'Home', route: 'main', icon: 'home'},
+    {name: 'Info', route: 'info', icon: 'info'},
+    {name: 'Some Page', route: 'void', icon: 'help'},
+  ];
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
