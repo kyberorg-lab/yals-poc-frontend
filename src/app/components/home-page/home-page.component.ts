@@ -3,11 +3,11 @@ import {StubMessage} from '../../stubMessage';
 import {MessageService} from '../../message.service';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
 })
-export class MainPageComponent implements OnInit {
+export class HomePageComponent implements OnInit {
   stubMessage: StubMessage;
 
   constructor(private messageService: MessageService) { }
