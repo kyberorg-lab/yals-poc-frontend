@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {StubMessage} from '../../stubMessage';
-import {MessageService} from '../../message.service';
+import {Component, OnInit} from '@angular/core';
+import {StubMessage} from '../../classes/stubMessage';
+import {MessageService} from '../../services/message.service';
 
 @Component({
   selector: 'app-home-page',
@@ -10,7 +10,8 @@ import {MessageService} from '../../message.service';
 export class HomePageComponent implements OnInit {
   stubMessage: StubMessage;
 
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService: MessageService) {
+  }
 
   ngOnInit(): void {
     this.messageService.getStubMessage().subscribe((data: StubMessage) => {
