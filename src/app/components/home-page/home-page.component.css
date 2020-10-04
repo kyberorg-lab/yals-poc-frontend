@@ -8,3 +8,11 @@
 .debug {
   background-color: green;
 }
+
+.debug-l {
+  background-color: blue;
+}
+
+.debug-r {
+  background-color: black;
+}
