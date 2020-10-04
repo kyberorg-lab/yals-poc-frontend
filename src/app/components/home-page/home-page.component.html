@@ -1,4 +1,13 @@
-<h1 class="text-center">It works!</h1>
-<div *ngIf="stubMessage">
-  <span>Message from API: {{ stubMessage.message }}</span>
+<div fxFlex fxFlexFill fxLayout="row">
+  <!-- Left Side -->
+  <div fxFlex.lg="25%" fxFlex.md="15%" fxFlex.sm="10%" fxFlex.xs="1%"></div>
+  <!-- Central Div -->
+  <div fxFlex.lg="50%" fxFlex.md="70%" fxFlex.sm="80%" fxFlex.xs="98%">
+    <h1 class="text-center">It works!</h1>
+    <div *ngIf="stubMessage">
+      <span>Message from API: {{ stubMessage.message }}</span>
+    </div>
+  </div>
+  <!-- Right Side -->
+  <div class="debug-r" fxFlex.lg="25%" fxFlex.md="15%" fxFlex.sm="10%" fxFlex.xs="1%"></div>
 </div>
