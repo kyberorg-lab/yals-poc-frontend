@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {StubMessage} from '../../stubMessage';
-import {MessageService} from '../../message.service';
+import {StubMessage} from '../../classes/stubMessage';
+import {MessageService} from '../../services/message.service';
 
 @Component({
   selector: 'app-home-page',
