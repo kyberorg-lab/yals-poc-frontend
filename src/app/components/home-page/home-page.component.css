@@ -16,8 +16,3 @@
 .debug-r {
   background-color: black;
 }
-
-/* Safari fix */
-div[fxLayout="column"] > div[fxFlex] {
-  flex: 1 0 auto !important;
-}
