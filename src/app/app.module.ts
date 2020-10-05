@@ -16,13 +16,15 @@ import {HomePageComponent} from './components/home-page/home-page.component';
 import {InfoPageComponent} from './components/info-page/info-page.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {InfoComponent} from './components/info/info.component';
+import {HomeComponent} from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     InfoPageComponent,
-    InfoComponent
+    InfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
