@@ -15,12 +15,14 @@ import {MatListModule} from '@angular/material/list';
 import {HomePageComponent} from './components/home-page/home-page.component';
 import {InfoPageComponent} from './components/info-page/info-page.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {InfoComponent} from './components/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    InfoPageComponent
+    InfoPageComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
