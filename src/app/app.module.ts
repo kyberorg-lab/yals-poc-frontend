@@ -1,28 +1,17 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSliderModule} from '@angular/material/slider';
 import {LayoutModule} from '@angular/cdk/layout';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-import {HomePageComponent} from './components/home-page/home-page.component';
-import {InfoPageComponent} from './components/info-page/info-page.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {InfoComponent} from './components/info/info.component';
 import {HomeComponent} from './components/home/home.component';
+import {MDBBootstrapModulesPro, MDBSpinningPreloader} from 'ng-uikit-pro-standard';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    InfoPageComponent,
     InfoComponent,
     HomeComponent
   ],
@@ -31,16 +20,11 @@ import {HomeComponent} from './components/home/home.component';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule,
+    MDBBootstrapModulesPro.forRoot(),
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    FlexLayoutModule,
   ],
-  providers: [],
+  providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

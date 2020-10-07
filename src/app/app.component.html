@@ -1,34 +1,60 @@
-<div class="container" [class.is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="toolbar">
-    <button mat-icon-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1 class="app-name">Yet another link shortener</h1>
-  </mat-toolbar>
+<!--Double navigation-->
+<header>
+  <!-- Sidebar navigation -->
+  <mdb-side-nav #sidenav [fixed]="true" class="wide fixed">
 
-  <mat-sidenav-container class="sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 56: 0">
-    <mat-sidenav #drawer [mode]="mobileQuery.matches ? 'over' : 'side'"
-                 [fixedInViewport]="mobileQuery.matches"
-                 [opened]="!mobileQuery.matches"
-                 fixedTopGap="56">
-      <mat-nav-list>
-        <a mat-list-item>
-          <img alt="App Icon" class="app-icon" src="favicon.ico"><!-- TODO replace favicon with normal icon -->
-          <span class="app-name">Yals</span> <!-- TODO app name from env -->
-        </a>
-      </mat-nav-list>
-      <mat-divider></mat-divider>
-      <mat-nav-list (click)="mobileQuery.matches ? drawer.close() : drawer.open()">
-        <a *ngFor="let page of pages" mat-list-item routerLink="{{page?.route}}">
-          <mat-icon style="padding-right: 5px;">{{page?.icon}}</mat-icon>
-          <span>{{page?.name}}</span>
-        </a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
+    <mdb-navbar-brand>
+      <!-- Logo -->
+      <li>
+        <div class="logo-wrapper waves-light">
+          <a href="#"><img alt="d" class="img-fluid flex-center" src="favicon.ico"></a>
+        </div>
+      </li>
+      <!--/. Logo -->
+    </mdb-navbar-brand>
 
+    <links>
+      <!-- Side navigation links -->
+      <li>
+        <ul *ngFor="let page of pages" mdbWavesEffect>
+          <a (click)="sidenav.hide()" routerLink="{{ page.route}}">
+            <mdb-icon class="menu-icon far-icon" fas icon="{{ page.icon }}"></mdb-icon>
+            <span class="menu-item-text">{{page.name}}</span>
+          </a>
+        </ul>
+      </li>
+      <!--/. Side navigation links -->
+    </links>
+    <div class="sidenav-bg mask-strong"></div>
+  </mdb-side-nav>
+  <!--/. Sidebar navigation -->
+
+  <!-- NavBar -->
+  <mdb-navbar SideClass="navbar navbar-expand-lg ie-nav fixed-top" [containerInside]="false">
+    <div class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse">
+          <mdb-icon fas icon="bars"></mdb-icon>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </div>
+
+    <mdb-navbar-brand>
+      <div class="navbar-brand">
+        <strong>Yet another link shortener</strong>
+      </div>
+    </mdb-navbar-brand>
+  </mdb-navbar>
+  <!--/. NavBar -->
+</header>
+<!--/.Double navigation-->
+
+<!--Main Layout-->
+<main>
+  <div class="container-fluid mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<!--/Main layout-->

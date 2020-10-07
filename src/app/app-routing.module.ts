@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {HomePageComponent} from './components/home-page/home-page.component';
-import {InfoPageComponent} from './components/info-page/info-page.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from './components/home/home.component';
+import {InfoComponent} from './components/info/info.component';
 
 const routes: Routes = [
-  {path: 'main', component: HomePageComponent},
-  {path: 'info', component: InfoPageComponent},
+  {path: 'main', component: HomeComponent},
+  {path: 'info', component: InfoComponent},
   {path: '', redirectTo: 'main', pathMatch: 'full'},
-  {path: '**', component: InfoPageComponent} // TODO WildCard
+  {path: '**', component: HomeComponent} // TODO WildCard
 ];
 
 @NgModule({

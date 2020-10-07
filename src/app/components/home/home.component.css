@@ -1,0 +1,18 @@
+.main-input {
+  width: 75%;
+}
+
+@media only screen and (max-width: 575px) {
+  .main-input {
+    width: 100%;
+  }
+}
+
+.main-area {
+  background: #f0f0f0;
+}
+
+.border-area {
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
