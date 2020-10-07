@@ -1,5 +1,5 @@
 FROM node:12.11 AS ANGULAR_BUILD
-RUN npm install -g @angular/cli@10.0.5
+RUN npm install -g @angular/cli@10.0.6
 ARG MDB_GITLAB_TOKEN=valid_token_here_please
 ARG BUILD_ENV=production
 COPY . /app
