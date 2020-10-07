@@ -4,7 +4,7 @@ ARG MDB_GITLAB_TOKEN=valid_token_here_please
 ARG BUILD_ENV=production
 COPY . /app
 WORKDIR /app
-
+RUN echo $MDB_GITLAB_TOKEN
 RUN MDB_GITLAB_TOKEN=$MDB_GITLAB_TOKEN npm install && ng build --configuration $BUILD_ENV
 
 FROM nginx:1.19.2-alpine
