@@ -21,6 +21,9 @@ pipeline {
 
           def buildArgs = [];
           buildArgs << "BUILD_ENV=production"
+          withCredentials([string(credentialsId: 'mdb-token', variable: 'MDB_TOKEN')]) {
+             buildArgs << "MDB_GITLAB_TOKEN=${env.MDB_TOKEN}"
+          }
 
           dockerBuild(repo: env.DOCKER_REPO, tags: tags, buildArgs: buildArgs);
           dockerLogin(creds: 'hub-docker');
