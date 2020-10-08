@@ -8,8 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "env-install"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -25,8 +24,8 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "angular-bootstrap-md": "10.0.0",
     "animate.css": "^4.1.1",
-    "env-install": "1.0.0",
     "hammerjs": "^2.0.8",
+    "ng-uikit-pro-standard": "git+https://oauth2:_iBVy6W6TwDgvKabe9-w@git.mdbootstrap.com/mdb/angular/ng-uikit-pro-standard.git",
     "rxjs": "~6.5.5",
     "screenfull": "^3.3.0",
     "tslib": "^2.0.0",
@@ -51,8 +50,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
-  },
-  "envDependencies": {
-    "ng-uikit-pro-standard": "git+https://oauth2:${MDB_GITLAB_TOKEN}@git.mdbootstrap.com/mdb/angular/ng-uikit-pro-standard.git"
   }
 }
