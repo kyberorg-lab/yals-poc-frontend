@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Page} from './classes/page';
 
 @Component({
@@ -13,4 +13,9 @@ export class AppComponent {
     {name: 'Some Page', route: 'void', icon: 'question'},
   ];
 
+  @ViewChild('sidenav') private sideNav: any;
+
+  onMenuItemClick(): void {
+    this.sideNav.hide();
+  }
 }

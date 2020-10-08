@@ -31,13 +31,22 @@ header, main, footer {
   padding: 0.5rem 1rem;
 }
 
+.menu-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.active-menu-item {
+  background-color: #e7f1fe;
+}
 
 .menu-icon {
-  color: white;
+  width: 16px;
+  color: black;
 }
 
 .menu-item-text {
-  color: white;
+  color: black;
   font-size: 1.4rem !important;
 }
 

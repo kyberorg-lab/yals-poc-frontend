@@ -1,7 +1,7 @@
 <!--Double navigation-->
 <header>
   <!-- Sidebar navigation -->
-  <mdb-side-nav #sidenav [fixed]="true" class="wide fixed">
+  <mdb-side-nav #sidenav [fixed]="true" class="wide fixed white">
 
     <mdb-navbar-brand>
       <!-- Logo -->
@@ -17,7 +17,7 @@
       <!-- Side navigation links -->
       <li>
         <ul *ngFor="let page of pages" mdbWavesEffect>
-          <a (click)="sidenav.hide()" routerLink="{{ page.route}}">
+          <a (click)="onMenuItemClick()" class="menu-item active-{{ page.route}}" routerLink="{{ page.route}}">
             <mdb-icon class="menu-icon far-icon" fas icon="{{ page.icon }}"></mdb-icon>
             <span class="menu-item-text">{{page.name}}</span>
           </a>
