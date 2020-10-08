@@ -1,12 +1,12 @@
 .main-input {
-  width: 75%;
+  flex-grow: 2;
 }
 
-@media only screen and (max-width: 575px) {
+/*@media only screen and (max-width: 575px) {
   .main-input {
     width: 100%;
   }
-}
+}*/
 
 .main-area {
   background: #f0f0f0;

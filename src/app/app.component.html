@@ -1,7 +1,7 @@
 <!--Double navigation-->
 <header>
   <!-- Sidebar navigation -->
-  <mdb-side-nav #sidenav [fixed]="true" class="wide fixed white">
+  <mdb-side-nav #sidenav [fixed]="true" [sidenavBreakpoint]="992" class="fixed white side-nav">
 
     <mdb-navbar-brand>
       <!-- Logo -->
@@ -34,7 +34,7 @@
     <div class="navbar-container">
       <!-- SideNav slide-out button -->
       <div class="float-left">
-        <a (click)="sidenav.show()" class="button-collapse">
+        <a (click)="sidenav.toggle()" class="button-collapse">
           <mdb-icon fas icon="bars"></mdb-icon>
         </a>
       </div>
